@@ -1,0 +1,128 @@
+﻿<Window x:Class="PSI_JAM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PSI_JAM"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="980" Width="1440">
+    <Grid x:Name="MainGrid">
+
+        <Border x:Name="PSI_Border" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Center" Height="66" VerticalAlignment="Top" Width="1440">
+            <Label x:Name="PSI_Label" Content="The Morrisian Pneumonia Severity Index (PSI) Calculator for Patients admitted to Jacob Hospital Emergency Room (ER) with Community-Acquired Pneumonia (CAP)" HorizontalAlignment="Left" Margin="50,10,0,0" VerticalAlignment="Top" Height="56" Width="1390" IsEnabled="False" FontFamily="Comic Sans MS" FontSize="16" FontWeight="Bold" BorderBrush="Black" />
+        </Border>
+        <TextBlock x:Name="NursingHomeResidentTextBlock" HorizontalAlignment="Left" Margin="0,247,0,0" Text=" Nursing Home Resident:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Comic Sans MS" Height="86" Width="498"/>
+        <TextBlock x:Name="NeoplasticDisease_Cancer_TextBlock" HorizontalAlignment="Left" Margin="0,328,0,0" Text=" Neoplastic Disease (Cancer):" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Comic Sans MS" Height="93" Width="498"/>
+        <TextBlock x:Name="SexTextBlock" HorizontalAlignment="Left" Margin="0,154,0,0" Text=" Sex:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Comic Sans MS" Height="88" Width="319"/>
+        <TextBlock x:Name="CerebrovascularDiseaseTextBlock" HorizontalAlignment="Left" Margin="0,597,0,0" Text=" Cerebrovascular Disease:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Comic Sans MS" Height="83" Width="319"/>
+        <TextBlock x:Name="CongestiveHeartFailureTextBlock" Margin="0,510,0,0" Text=" Congestive Heart Failure:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Comic Sans MS" Height="82" HorizontalAlignment="Left" Width="498"/>
+        <TextBlock x:Name="LiverDiseaseTextBlock" HorizontalAlignment="Left" Margin="0,419,0,0" Text=" Liver Disease:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Comic Sans MS" Height="86" Width="498"/>
+        <TextBlock x:Name="RenalDiseaseTextBlock" HorizontalAlignment="Left" Margin="0,680,0,0" Text=" Renal Disease:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Comic Sans MS" Height="88" Width="319"/>
+        <TextBlock x:Name="PleuralEffusionOnX_RayTextBlock" HorizontalAlignment="Left" Margin="0,861,0,0" Text=" Pleural Effusion On X-Ray:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Comic Sans MS" Height="88" Width="319"/>
+        <TextBlock x:Name="AgeTextBlock" HorizontalAlignment="Left" Margin="0,71,0,0" Text=" Age:" TextWrapping="Wrap" VerticalAlignment="Top" Height="83" Width="498" FontFamily="Comic Sans MS" FontSize="24"/>
+        <TextBlock x:Name="AlteredMentalStatusTextBlock" HorizontalAlignment="Left" Margin="0,768,0,0" Text=" Altered Mental Status:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Comic Sans MS" Height="88" Width="319"/>
+        <Border x:Name="First10VariableBorder" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="878" Margin="0,66,0,0" VerticalAlignment="Top" Width="498"/>
+        <Border x:Name="AgeBorder" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="88" VerticalAlignment="Top" Width="498" Margin="0,66,0,0"/>
+        <Border x:Name="SexBorder" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="88" VerticalAlignment="Top" Width="498" Margin="0,154,0,0"/>
+        <Border x:Name="NursingHomeResidentBorder" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="88" VerticalAlignment="Top" Width="498" Margin="0,240,0,0"/>
+        <Border x:Name="NeoplasticDiseaseBorder" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="88" VerticalAlignment="Top" Width="498" Margin="0,328,0,0"/>
+        <Border x:Name="LiverDiseaseBorder" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="88" VerticalAlignment="Top" Width="498" Margin="0,417,0,0"/>
+        <Border x:Name="CongestiveHeartFailureBorder" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="88" VerticalAlignment="Top" Width="498" Margin="0,504,0,0"/>
+        <Border x:Name="CerebrovascularDiseaseBorder" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="88" VerticalAlignment="Top" Width="498" Margin="0,592,0,0"/>
+        <Border x:Name="RenalDiseaseBorder" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="88" VerticalAlignment="Top" Width="498" Margin="0,680,0,0"/>
+        <Border x:Name="AlteredMentalStatusBorder" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="88" VerticalAlignment="Top" Width="498" Margin="0,768,0,0"/>
+        <Border x:Name="PleuralEffusionOnX_RayBorder" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="88" VerticalAlignment="Top" Width="498" Margin="0,856,0,0"/>
+        <TextBlock x:Name="TemperatureTextBlock" HorizontalAlignment="Left" Margin="498,247,0,0" Text=" Temperature:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Comic Sans MS" Height="86" Width="488"/>
+        <TextBlock x:Name="PulseTextBlock" HorizontalAlignment="Left" Margin="498,328,0,0" Text=" Pulse:" TextWrapping=" Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Comic Sans MS" Height="93" Width="488"/>
+        <TextBlock x:Name="SystolicBloodPressureTextBlock" HorizontalAlignment="Left" Margin="498,154,0,0" Text=" Systolic Blood Pressure:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Comic Sans MS" Height="88" Width="312"/>
+        <TextBlock x:Name="SodiumTextBlock" HorizontalAlignment="Left" Margin="498,597,0,0" Text=" Sodium:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Comic Sans MS" Height="83" Width="312"/>
+        <TextBlock x:Name="BUNTextBlock" Margin="498,510,0,0" Text=" BUN:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Comic Sans MS" Height="82" HorizontalAlignment="Left" Width="488"/>
+        <TextBlock x:Name="pHTextBlock" HorizontalAlignment="Left" Margin="498,419,0,0" Text=" pH:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Comic Sans MS" Height="86" Width="488"/>
+        <TextBlock x:Name="GlucoseTextBlock" HorizontalAlignment="Left" Margin="498,680,0,0" Text=" Glucose:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Comic Sans MS" Height="88" Width="312"/>
+        <TextBlock x:Name="PartialPressureOfOxygenTextBlock" HorizontalAlignment="Left" Margin="498,861,0,0" Text=" Partial Pressure of Oxygen:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Comic Sans MS" Height="88" Width="488"/>
+        <TextBlock x:Name="RespiratoryRateTextBlock" HorizontalAlignment="Left" Margin="498,71,0,0" Text=" Respiratory Rate:" TextWrapping="Wrap" VerticalAlignment="Top" Height="83" Width="488" FontFamily="Comic Sans MS" FontSize="24"/>
+        <TextBlock x:Name="HematocritTextBlock" HorizontalAlignment="Left" Margin="498,768,0,0" Text=" Hematocrit:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Comic Sans MS" Height="88" Width="312"/>
+        <Border x:Name="First10VariableBorder_Copy" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="878" Margin="498,66,0,0" VerticalAlignment="Top" Width="488"/>
+        <Border x:Name="AgeBorder_Copy" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="88" VerticalAlignment="Top" Width="488" Margin="498,66,0,0"/>
+        <Border x:Name="SystolicBloodPressureBorder" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="88" VerticalAlignment="Top" Width="488" Margin="498,154,0,0"/>
+        <Border x:Name="TemperatureBorder" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="88" VerticalAlignment="Top" Width="488" Margin="498,240,0,0"/>
+        <Border x:Name="PulseBorder" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="88" VerticalAlignment="Top" Width="488" Margin="498,328,0,0"/>
+        <Border x:Name="pHBorder" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="88" VerticalAlignment="Top" Width="488" Margin="498,417,0,0"/>
+        <Border x:Name="BUNBorder" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="88" VerticalAlignment="Top" Width="488" Margin="498,504,0,0"/>
+        <Border x:Name="SodiumBorder" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="88" VerticalAlignment="Top" Width="488" Margin="498,592,0,0"/>
+        <Border x:Name="GlucoseBorder" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="88" VerticalAlignment="Top" Width="488" Margin="498,680,0,0"/>
+        <Border x:Name="HematocritBorder" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="88" VerticalAlignment="Top" Width="488" Margin="498,768,0,0"/>
+        <Border x:Name="PartialPressureOfOxygenBorder" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="88" VerticalAlignment="Top" Width="488" Margin="498,856,0,0"/>
+        <TextBox x:Name="AgeTextBox" HorizontalAlignment="Left" Height="44" Margin="348,77,0,0" Text="Enter Value Here" TextWrapping="Wrap" VerticalAlignment="Top" Width="105"/>
+        <TextBox x:Name="RespiratoryRateTextBox" HorizontalAlignment="Left" Height="44" Margin="818,77,0,0" Text="Enter Value Here" TextWrapping="Wrap" VerticalAlignment="Top" Width="105"/>
+        <TextBox x:Name="SystolicBloodPressureTextBox" HorizontalAlignment="Left" Height="44" Margin="818,165,0,0" Text="Enter Value Here" TextWrapping="Wrap" VerticalAlignment="Top" Width="105"/>
+        <TextBox x:Name="PartialPressureOfOxygenTextBox" HorizontalAlignment="Left" Height="44" Margin="818,867,0,0" Text="Enter Value Here" TextWrapping="Wrap" VerticalAlignment="Top" Width="105"/>
+        <TextBox x:Name="TemperatureTextBox" HorizontalAlignment="Left" Height="44" Margin="818,253,0,0" Text="Enter Value Here" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" />
+        <TextBox x:Name="PulseTextBox" HorizontalAlignment="Left" Height="44" Margin="818,339,0,0" Text="Enter Value Here" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" />
+        <TextBox x:Name="pHTextBox" HorizontalAlignment="Left" Height="44" Margin="818,432,0,0" Text="Enter Value Here" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" />
+        <TextBox x:Name="BUNTextBox" HorizontalAlignment="Left" Height="44" Margin="818,516,0,0" Text="Enter Value Here" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" />
+        <TextBox x:Name="SodiumTextBox" HorizontalAlignment="Left" Height="44" Margin="818,603,0,0" Text="Enter Value Here" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" />
+        <TextBox x:Name="GlucoseTextBox" HorizontalAlignment="Left" Height="44" Margin="818,691,0,0" Text="Enter Value Here" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" />
+        <TextBox x:Name="HematocritTextBox" HorizontalAlignment="Left" Height="44" Margin="818,779,0,0" Text="Enter Value Here" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" />
+        <ComboBox x:Name="NursingHomeResidentComboBox" HorizontalAlignment="Left" Margin="348,257,0,0" VerticalAlignment="Top" Width="120" FontFamily="Comic Sans MS">
+            <ComboBoxItem Content="Yes"/>
+            <ComboBoxItem Content="No"/>
+        </ComboBox>
+        <ComboBox x:Name="SexComboBox" HorizontalAlignment="Left" Margin="348,164,0,0" VerticalAlignment="Top" Width="120" FontFamily="Comic Sans MS">
+            <ComboBoxItem Content="Male"/>
+            <ComboBoxItem Content="Female"/>
+        </ComboBox>
+        <ComboBox x:Name="NeoPlasticDiseaseCancerComboBox" HorizontalAlignment="Left" Margin="348,339,0,0" VerticalAlignment="Top" Width="120" FontFamily="Comic Sans MS">
+            <ComboBoxItem Content="Yes"/>
+            <ComboBoxItem Content="No"/>
+        </ComboBox>
+        <ComboBox x:Name="LiverDiseaseComboBox" HorizontalAlignment="Left" Margin="348,432,0,0" VerticalAlignment="Top" Width="120" FontFamily="Comic Sans MS">
+            <ComboBoxItem Content="Yes"/>
+            <ComboBoxItem Content="No"/>
+        </ComboBox>
+        <ComboBox x:Name="CongestiveHeartFailureComboBox" HorizontalAlignment="Left" Margin="348,521,0,0" VerticalAlignment="Top" Width="120" FontFamily="Comic Sans MS">
+            <ComboBoxItem Content="Yes"/>
+            <ComboBoxItem Content="No"/>
+        </ComboBox>
+        <ComboBox x:Name="CerebrovascularDiseaseComboBox" HorizontalAlignment="Left" Margin="348,608,0,0" VerticalAlignment="Top" Width="120" FontFamily="Comic Sans MS">
+            <ComboBoxItem Content="Yes"/>
+            <ComboBoxItem Content="No"/>
+        </ComboBox>
+        <ComboBox x:Name="RenalDiseaseComboBox" HorizontalAlignment="Left" Margin="348,696,0,0" VerticalAlignment="Top" Width="120" FontFamily="Comic Sans MS">
+            <ComboBoxItem Content="Yes"/>
+            <ComboBoxItem Content="No"/>
+        </ComboBox>
+        <ComboBox x:Name="AlteredMentalStatusComboBox" HorizontalAlignment="Left" Margin="348,784,0,0" VerticalAlignment="Top" Width="120" FontFamily="Comic Sans MS">
+            <ComboBoxItem Content="Yes"/>
+            <ComboBoxItem Content="No"/>
+        </ComboBox>
+        <ComboBox x:Name="PleuralEffusOnXRayComboBox" HorizontalAlignment="Left" Margin="348,872,0,0" VerticalAlignment="Top" Width="120" FontFamily="Comic Sans MS">
+            <ComboBoxItem Content="Yes"/>
+            <ComboBoxItem Content="No"/>
+        </ComboBox>
+        <RadioButton x:Name="TemperatureRadioButton0" Content="Celsius" HorizontalAlignment="Left" Margin="786,302,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS" GroupName="Temp"/>
+        <RadioButton x:Name="TemperatureRadioButton1" Content="Fahrenheit" HorizontalAlignment="Left" Margin="886,302,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS" GroupName="Temp"/>
+        <RadioButton x:Name="BUNRadioButton0" Content="mg/DL" HorizontalAlignment="Left" Margin="787,565,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS" GroupName="BUN"/>
+        <RadioButton x:Name="BUNRadioButton1" Content="mmol/L" HorizontalAlignment="Left" Margin="896,565,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS" GroupName="BUN"/>
+        <RadioButton x:Name="GlucoseRadioButton0" Content="mg/dL" HorizontalAlignment="Left" Margin="789,744,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS" GroupName="Glucose"/>
+        <RadioButton x:Name="GlucoseRadioButton1" Content="mmol/L" HorizontalAlignment="Left" Margin="896,744,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS" GroupName="Glucose"/>
+        <RadioButton x:Name="PartialPressureOfOxygenRadioButton0" Content="mmHg" HorizontalAlignment="Left" Margin="790,913,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS" GroupName="PPO"/>
+        <RadioButton x:Name="PartialPressureOfOxygenRadioButton1" Content="kPA" HorizontalAlignment="Left" Margin="906,913,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS" GroupName="PPO"/>
+        <TextBlock x:Name="AgeUnitsTextBlock" HorizontalAlignment="Left" Margin="458,81,0,0" Text="Years" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Comic Sans MS" Height="29" Width="40"/>
+        <TextBlock x:Name="RespiratoryRateUnitsTextBlock" HorizontalAlignment="Left" Margin="928,75,0,0" Text="Breaths/Minute" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Comic Sans MS" Height="29" Width="40" FontSize="10"/>
+        <TextBlock x:Name="SystolicBloodPressureUnitsTextBlock" HorizontalAlignment="Left" Margin="928,169,0,0" Text="mmHG" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Comic Sans MS" Height="29" Width="40"/>
+        <TextBlock x:Name="PulseUnitsTextBlock" HorizontalAlignment="Left" Margin="928,338,0,0" Text="Beats/Minute" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Comic Sans MS" Height="29" Width="40"/>
+        <TextBlock x:Name="SodiumUnitsTextBlock" HorizontalAlignment="Left" Margin="928,607,0,0" Text="mmol/L" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Comic Sans MS" Height="29" Width="40" FontSize="10"/>
+        <TextBlock x:Name="HematocritUnitsTextBlock" HorizontalAlignment="Left" Margin="946,787,0,0" Text="%" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Comic Sans MS" Height="28" Width="40"/>
+        <Button x:Name="CalculateButton" Content="Calculate" HorizontalAlignment="Left" Margin="1127,116,0,0" VerticalAlignment="Top" Height="79" Width="189" FontFamily="Comic Sans MS" FontSize="24" Click="CalculateButton_Click"/>
+        <TextBlock x:Name="ClassTextBlock" HorizontalAlignment="Left" Margin="1108,300,0,0" Text="Patient Class:" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Comic Sans MS" FontSize="36"/>
+        <Border x:Name="ClassResultBorder" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="79" Margin="1035,383,0,0" VerticalAlignment="Top" Width="361">
+            <TextBlock x:Name="ClassResultTextBlock" HorizontalAlignment="Center" Text="" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Comic Sans MS" FontSize="36"/>
+        </Border>
+        <Border x:Name="AdminRecomendationBorder" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="142" Margin="1035,665,0,0" VerticalAlignment="Top" Width="361">
+            <TextBlock x:Name="AdminRecommendationTextBlock" HorizontalAlignment="Center" Text="" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Comic Sans MS" FontSize="36"/>
+        </Border>
+        <TextBlock x:Name="AdminRecomendationTextBlock" HorizontalAlignment="Left" Margin="1071,551,0,0" Text="Admission Recommendation:" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Comic Sans MS" FontSize="36" TextAlignment="Center"/>
+
+    </Grid>
+</Window>
